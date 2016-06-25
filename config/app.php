@@ -210,4 +210,6 @@ return [
 
     ],
 
+    'api_key' => 'e45b1d2337017631ad6dd95ff4e875',
+    'api_secret' => '88fdedcc88eacf644714adf84176231d0c9eaf381c420d648850a1eedc04',
 ];

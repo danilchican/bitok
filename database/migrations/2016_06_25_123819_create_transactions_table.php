@@ -19,7 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->string('phone', 80)->nullable();
             $table->boolean('status')->default(false);
 
-            // summa
+            // summa BTC & BYR
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

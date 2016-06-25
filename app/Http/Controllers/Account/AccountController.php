@@ -29,28 +29,26 @@ class AccountController extends Controller
      */
     public function generate(GenerateRequest $request, CoinapultContract $client) {
 
-        $API = array(
-            'key' => 'e45b1d2337017631ad6dd95ff4e875',
-            'secret' => '88fdedcc88eacf644714adf84176231d0c9eaf381c420d648850a1eedc04'
-        );
+        $client->setData(config('app.api_key'), config('app.api_secret'));
 
-        $client->setData($API['key'], $API['secret']);
-
-        $result = $client->get_bitcoin_address();
+        $public_address = $client->get_bitcoin_address();
 
         $user = Auth::user();
 
         $transaction = new Transaction([
-            'public_address' => $result['address'],
+            'public_address' => $public_address['address'],
             'phone' => $request->input('phone'),
         ]);
+
+        // complete saving amount
+        // transfer amount from BTC to BYR
 
         $user->transaction()->save($transaction);
 
         return view('account.pay')->with([
-            'public_address' => $result['address'],
-            'amount_btc' => $request->input('price'),
-            'amount_bel' => $request->input('price') * 2,
+            'public_address' => $public_address['address'],
+            'amount_btc' => $request->input('price') * 2,
+            'amount_bel' => $request->input('price'),
         ]);
     }
 }
