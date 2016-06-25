@@ -17,4 +17,19 @@ Route::get('/', function () {
 
 Route::auth();
 
+Route::group(['middleware' => ['web', 'auth']], function () {
+
+    Route::get('/account', [
+        'as' => 'account.index',
+        'uses' => 'Account\AccountController@index'
+    ]);
+
+});
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::post('/generate', [
+        'as' => 'account.generate',
+        'uses' => 'Account\AccountController@generate'
+    ]);
+});
 Route::get('/home', 'HomeController@index');
