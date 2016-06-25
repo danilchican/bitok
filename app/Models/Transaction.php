@@ -22,7 +22,7 @@ class Transaction extends Model
 
 
     protected $fillable = [
-        'public_address', 'phone', 'status'
+        'public_address', 'phone', 'status', 'btc_amount', 'bel_amount',
     ];
 
     public function user()

@@ -18,8 +18,8 @@ class CreateTransactionsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('phone', 80)->nullable();
             $table->boolean('status')->default(false);
-
-            // summa BTC & BYR
+            $table->string('btc_amount', 80)->nullable();
+            $table->string('bel_amount', 80)->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

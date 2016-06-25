@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\Helpers\CoinapultContract;
+use App\Helpers\ExchangeApiContract;
 
 use Validator;
 
@@ -27,7 +28,7 @@ class AccountController extends Controller
      * @param CoinapultContract $client
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void
      */
-    public function generate(GenerateRequest $request, CoinapultContract $client) {
+    public function generate(GenerateRequest $request, CoinapultContract $client, ExchangeApiContract $course) {
 
         $client->setData(config('app.api_key'), config('app.api_secret'));
 
@@ -35,19 +36,21 @@ class AccountController extends Controller
 
         $user = Auth::user();
 
+        $dollars = $request->input('price') / 20000;
+        $btc_amount = $course->transUSDtoBTC($dollars);
+
         $transaction = new Transaction([
             'public_address' => $public_address['address'],
             'phone' => $request->input('phone'),
+            'btc_amount' => $btc_amount,
+            'bel_amount' => $request->input('price'),
         ]);
-
-        // complete saving amount
-        // transfer amount from BTC to BYR
 
         $user->transaction()->save($transaction);
 
         return view('account.pay')->with([
             'public_address' => $public_address['address'],
-            'amount_btc' => $request->input('price') * 2,
+            'amount_btc' => $btc_amount,
             'amount_bel' => $request->input('price'),
         ]);
     }

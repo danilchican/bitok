@@ -148,7 +148,13 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
+         *  Own providers
+         */
         App\Providers\CoinapultProvider::class,
+        App\Providers\ExchangeApiProvider::class,
+
         Collective\Html\HtmlServiceProvider::class,
 
         /*
