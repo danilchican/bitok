@@ -24,7 +24,7 @@
             background-size: cover;
         }
         .cont-in {
-            padding:50px 0;
+            padding:20px 0;
             overflow: hidden;
         }
         .fa-btn {
