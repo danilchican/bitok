@@ -1,11 +1,5 @@
 @extends('layouts.app')
 
-@section('styles')
-    <style>
-
-    </style>
-    @endsection
-
 @section('content')
     <div class="site-wrapper">
 
@@ -22,10 +16,9 @@
                             <li><a href="#">О нас</a></li>
                         </ul>
                     </div>
-
                 </div>
 
-                <div class="inner cover">
+                <div class="inner cover cont-in">
                     <div class="col-md-6">
 
                         <form class="form-signin" role="form" method="POST" action="{{ url('/login') }}">

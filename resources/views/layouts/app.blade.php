@@ -23,6 +23,10 @@
             -o-background-size: cover;
             background-size: cover;
         }
+        .cont-in {
+            padding:50px 0;
+            overflow: hidden;
+        }
         .fa-btn {
             margin-right: 6px;
         }
