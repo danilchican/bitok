@@ -7,6 +7,9 @@
             margin-bottom: 0;
             text-shadow: none;
         }
+        .col-xs-4 {
+            text-align: right;
+        }
     </style>
     @endsection
 
@@ -29,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 cont-in">
+                <div class="col-md-12 col-xs-12 col-sm-12 cont-in">
                     <div class="panel-heading">
                         <div class="col-md-offset-2">
                             <h2>Registration</h2>
@@ -40,9 +43,9 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Кто вы</label>
+                                <label for="name" class="col-md-4 col-sm-4 col-xs-4 control-label">Кто вы</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-5 col-xs-5">
                                     <select name="type" class="form-control" id="type-reg">
                                         <option value="0">Компания</option>
                                         <option value="1">Клиент</option>
@@ -56,9 +59,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="name" class="col-md-4 control-label name">Имя компании</label>
+                                <label for="name" class="col-md-4 col-sm-4 col-xs-4 control-label name">Имя компании</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-5 col-xs-5">
                                     <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
 
                                     @if ($errors->has('name'))
@@ -70,9 +73,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="email" class="col-md-4 control-label">E-Mail адрес</label>
+                                <label for="email" class="col-md-4 col-sm-4 col-xs-4 control-label">E-Mail адрес</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-5 col-xs-5">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                     @if ($errors->has('email'))
@@ -84,9 +87,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password" class="col-md-4 control-label">Пароль</label>
+                                <label for="password" class="col-md-4 col-sm-4 col-xs-4 control-label">Пароль</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-5 col-xs-5">
                                     <input id="password" type="password" class="form-control" name="password">
 
                                     @if ($errors->has('password'))
@@ -98,9 +101,9 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                <label for="password-confirm" class="col-md-4 control-label">Подтверждение пароля</label>
+                                <label for="password-confirm" class="col-md-4 col-sm-4 col-xs-4 control-label">Подтверждение пароля</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-5 col-xs-5">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
 
                                     @if ($errors->has('password_confirmation'))
@@ -112,8 +115,8 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-md-6" style="margin-left: 18%">
-                                    <button type="submit" class="btn btn-default">
+                                <div>
+                                    <button type="submit" class="btn btn-default col-xs-5 col-xs-offset-4 col-sm-5 col-sm-offset-4 col-md-6 col-md-offset-4">
                                         <i class="fa fa-btn fa-user"></i> Register
                                     </button>
                                 </div>
