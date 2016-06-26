@@ -10,6 +10,9 @@
         .col-xs-4 {
             text-align: right;
         }
+        .reg-btn {
+            text-align: center;
+        }
     </style>
     @endsection
 
@@ -115,9 +118,10 @@
                             </div>
 
                             <div class="form-group">
-                                <div>
-                                    <button type="submit" class="btn btn-default col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-5 col-md-offset-4">
-                                        <i class="fa fa-btn fa-user"></i> Создать аккаунт
+                                <label class="col-md-4 col-sm-4 col-xs-4 control-label"></label>
+                                <div class="col-md-6 col-sm-5 col-xs-7">
+                                    <button type="submit" class="reg-btn btn btn-default col-md-8 col-sm-8 col-xs-12">
+                                        <i class="fa fa-btn fa-user"></i> Зарегистрироваться
                                     </button>
                                 </div>
                             </div>
