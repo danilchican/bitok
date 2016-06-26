@@ -12,7 +12,6 @@ use App\Http\Requests;
 use App\Helpers\CoinapultContract;
 use App\Helpers\ExchangeApiContract;
 
-use Validator;
 
 class AccountController extends Controller
 {
@@ -37,7 +36,7 @@ class AccountController extends Controller
         $user = Auth::user();
 
         $dollars = $request->input('price') / 20000;
-        $btc_amount = $course->transUSDtoBTC($dollars);
+        $btc_amount = round($course->transUSDtoBTC($dollars), 4);
 
         $transaction = new Transaction([
             'public_address' => $public_address['address'],

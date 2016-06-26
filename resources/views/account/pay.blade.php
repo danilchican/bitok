@@ -36,8 +36,6 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="/js/libs/qrcode/jquery.qrcode.js"></script>
-    <script type="text/javascript" src="/js/libs/qrcode/qrcode.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#qrcode').qrcode({

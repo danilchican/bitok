@@ -26,7 +26,7 @@ class GenerateRequest extends Request
     {
         return [
             'price' => 'numeric|required',
-            'phone' => 'integer|min:12|max:15|required',
+            'phone' => 'phone:AUTO|required',
         ];
     }
 }
