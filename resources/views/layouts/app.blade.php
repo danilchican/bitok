@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://bootstrap-3.ru/examples/cover/cover.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <style>
         body {
-            background: url('../images/bg.jpg') top center no-repeat fixed;
+            background: url('../images/bg.jpg') center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
