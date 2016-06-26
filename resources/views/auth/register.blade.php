@@ -108,7 +108,7 @@
                         lbl.text("Имя компании");
                         break;
                     case "1":
-                        lbl.text("Ваше имя");
+                        lbl.text("ФИО");
                         break;
                     default:
                         alert("Something wrong...");
