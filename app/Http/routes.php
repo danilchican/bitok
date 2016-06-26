@@ -37,4 +37,3 @@ Route::group(['middleware' => ['auth']], function () {
         'uses' => 'Account\AccountController@check'
     ]);
 });
-Route::get('/home', 'HomeController@index');
