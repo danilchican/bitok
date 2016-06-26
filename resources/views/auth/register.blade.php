@@ -25,8 +25,8 @@
                     <div class="inner">
                         <h2 class="masthead-brand">BitOK.by</h2>
                         <ul class="nav masthead-nav">
-                            <li class="active"><a href="{{ url('/') }}">Главная</a></li>
-                            <li><a href="{{ url('/register') }}">Регистрация</a></li>
+                            <li><a href="{{ url('/') }}">Главная</a></li>
+                            <li class="active"><a href="{{ url('/register') }}">Регистрация</a></li>
                             <li><a href="#">О нас</a></li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@
                 <div class="col-md-12 col-xs-12 col-sm-12 cont-in">
                     <div class="panel-heading">
                         <div class="col-md-offset-2">
-                            <h2>Registration</h2>
+                            <h2>Регистрация</h2>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -116,8 +116,8 @@
 
                             <div class="form-group">
                                 <div>
-                                    <button type="submit" class="btn btn-default col-xs-5 col-xs-offset-4 col-sm-5 col-sm-offset-4 col-md-6 col-md-offset-4">
-                                        <i class="fa fa-btn fa-user"></i> Register
+                                    <button type="submit" class="btn btn-default col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-5 col-md-offset-4">
+                                        <i class="fa fa-btn fa-user"></i> Создать аккаунт
                                     </button>
                                 </div>
                             </div>
