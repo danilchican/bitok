@@ -15,7 +15,7 @@
 
                 <div class="masthead clearfix">
                     <div class="inner">
-                        <h2 class="masthead-brand">BITok.by</h2>
+                        <h2 class="masthead-brand">BitOK.by</h2>
                         <ul class="nav masthead-nav">
                             <li class="active"><a href="{{ url('/') }}">Главная</a></li>
                             <li><a href="{{ url('/register') }}">Регистрация</a></li>

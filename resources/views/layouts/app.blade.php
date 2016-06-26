@@ -17,8 +17,11 @@
 
     <style>
         body {
-            background: url('../images/bg.jpg') top center no-repeat;
-            background-size: 100%;
+            background: url('../images/bg.jpg') top center no-repeat fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
         .fa-btn {
             margin-right: 6px;
