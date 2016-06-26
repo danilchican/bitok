@@ -54,4 +54,8 @@ class AccountController extends Controller
             'amount_bel' => $request->input('price'),
         ]);
     }
+
+    public function check() {
+        return 1;
+    }
 }

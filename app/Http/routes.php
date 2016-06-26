@@ -31,5 +31,10 @@ Route::group(['middleware' => ['auth']], function () {
         'as' => 'account.generate',
         'uses' => 'Account\AccountController@generate'
     ]);
+
+    Route::post('/check', [
+        'as' => 'account.check',
+        'uses' => 'Account\AccountController@check'
+    ]);
 });
 Route::get('/home', 'HomeController@index');
